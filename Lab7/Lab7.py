@@ -130,16 +130,3 @@ def some_func(last_name, first_name, age):
     return f'Hi {last_name} {first_name}, you are {age} years old'
 
 
-# print(some_func('shulyak', 'dmitry', 30))  # call
-# print(some_func('ivanov', 'ivan', 25))     # call
-# print(some_func('shulyak', 'dmitry', 30))  # cache
-#
-#
-# print(process_text('the French revolution resulted in 3 concepts: freedom,equality,fraternity'))
-# print(another_process('the French revolution resulted in 3 concepts: freedom,equality,fraternity'))
-# print(potentially_unsafe_func("abc"))
-# potentially_unsafe_func("abc")
-# # print(sum_of_values((1, 3, 5, 7)))
-# # sum_of_values((1, 3, 5, 7))
-# print(show_message(None) )
-

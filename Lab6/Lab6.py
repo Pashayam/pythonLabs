@@ -98,19 +98,3 @@ def last(iterable: Iterable):
     None
     """
     return next(reversed(iterable), None)
-
-
-# if __name__ == "__main__":
-#     foo = (x for x in range(10))
-#     print(foo)
-#     print(ilen(foo))
-#     print(list(flatten([0, [1, [2, 3]]])))
-#     print(list(distinct([1, 2, 0, 1, 3, 0, 2])))
-#
-#     users = [
-#         {'gender': 'female', 'age': 33},
-#         {'gender': 'male', 'age': 20},
-#         {'gender': 'female', 'age': 21},
-#     ]
-#     print(last([x for x in range(10)]))
-
