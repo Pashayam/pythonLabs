@@ -7,7 +7,10 @@ def ilen(iterable: Iterable):
     >>> ilen(foo)
     10
     """
-    return len(list(iterable))
+    count = 0
+    for _ in iterable:
+        count += 1
+    return count
 
 
 def flatten(iterable: Iterable):
@@ -66,16 +69,8 @@ def chunks(size: int, iterable: Iterable):
     >>> list(chunks(3, [0, 1, 2, 3, 4]))
     [(0, 1, 2), (3, 4, )]
     """
-    it = iter(iterable)
-    arr = []
-    try:
-        while True:
-            for i in range(size):
-                arr.append(next(it))
-            yield tuple(arr)
-            arr = []
-    except StopIteration:
-        yield tuple(arr)
+    for i in range(0, ilen(iterable), size):
+        yield tuple(iterable[i:i + size])
 
 
 def first(iterable: Iterable):
@@ -97,4 +92,9 @@ def last(iterable: Iterable):
     >>> last(range(0))
     None
     """
-    return next(reversed(iterable), None)
+    last_element = None
+    for i in iterable:
+        last_element = i
+    return last_element
+
+

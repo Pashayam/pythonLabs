@@ -85,7 +85,7 @@ def test_chunks_list():
 
 
 def test_chunks_str():
-    assert (list(Lab6.chunks(3, "String"))) == [('S', 't', 'r'), ('i', 'n', 'g'), ()]
+    assert (list(Lab6.chunks(3, "String"))) == [('S', 't', 'r'), ('i', 'n', 'g')]
 
 
 def test_chunks_none():
