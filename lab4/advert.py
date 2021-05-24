@@ -12,9 +12,7 @@ class ColorizeMixin:
 
 class Advert(ColorizeMixin):
     _price: int = 0
-
-    # def __repr__(self):
-    #     return f'{self.title} | {self.price} ₽'
+    repr_color_code = 32
 
     def __init__(self, date: dict):
         for key, v in date.items():
